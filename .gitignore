@@ -1,0 +1,8 @@
+# Exclure ces dossiers
+data/
+logs/
+notebooks/
+reports/
+__pycache__/
+*.pyc
+.DS_Store

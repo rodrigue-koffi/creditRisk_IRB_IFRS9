@@ -73,16 +73,6 @@ Ce projet implémente une modélisation complète du risque de crédit conforme 
 
 ---
 
-## Installation
-
-```bash
-# Cloner le dépôt
-git clone https://github.com/rodrigue-koffi/creditRisk_IRB_IFRS9.git
-cd creditRisk_IRB_IFRS9
-
-# Installer les dépendances
-pip install -r requirements.txt
-
 
 ## 🔮 Axes d'amélioration non pris en compte
 
@@ -123,5 +113,14 @@ Le projet actuel est fonctionnel et complet, mais les axes suivants n'ont **pas 
 - **Email** : kkanrodrigue@gmail.com
 
 ---
+## Installation
 
+```bash
+# Cloner le dépôt
+git clone https://github.com/rodrigue-koffi/creditRisk_IRB_IFRS9.git
+cd creditRisk_IRB_IFRS9
+
+# Installer les dépendances
+pip install -r requirements.txt
+---
 **Made with by Rodrigue KOFFI**

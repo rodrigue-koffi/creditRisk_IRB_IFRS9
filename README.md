@@ -82,3 +82,46 @@ cd creditRisk_IRB_IFRS9
 
 # Installer les dépendances
 pip install -r requirements.txt
+
+
+## 🔮 Axes d'amélioration non pris en compte
+
+Le projet actuel est fonctionnel et complet, mais les axes suivants n'ont **pas été implémentés** (réservés pour des versions futures) :
+
+| Axe | Description | Priorité |
+|-----|-------------|----------|
+| **API REST** | Exposer les modèles via FastAPI/Flask pour utilisation en production | Haute |
+| **Base de données** | Stocker les résultats (ECL, RWA) dans PostgreSQL ou MongoDB | Haute |
+| **Dashboard interactif** | Visualisation des métriques avec Power BI, Tableau ou Plotly Dash | Haute |
+| **CI/CD** | Automatiser les tests et le déploiement avec GitHub Actions | Moyenne |
+| **Containerisation** | Dockeriser l'application pour faciliter le déploiement | Moyenne |
+| **Modèles alternatifs** | Tester LightGBM, CatBoost, réseaux de neurones pour la PD | Moyenne |
+| **Scoring comportemental** | Intégrer des données transactionnelles en temps réel | Moyenne |
+| **Validation croisée temporelle** | Backtesting sur plusieurs cycles économiques | Haute |
+| **Modèle de corrélation** | Ajouter une matrice de corrélation PD/LGD/EAD (modèle copule) | Haute |
+| **Documentation automatique** | Générer la doc avec Sphinx ou MkDocs | Basse |
+| **Monitoring** | Mettre en place un suivi des dérives de modèles (concept drift) | Haute |
+| **Scénarios personnalisés** | Interface utilisateur pour définir ses propres scénarios macro | Basse |
+| **Passage à l'échelle** | Traitement de millions de lignes avec Spark ou Dask | Haute |
+| **Cloud** | Déploiement sur AWS SageMaker, Azure ML ou GCP | Moyenne |
+
+---
+
+## 👤 Auteur
+
+**Rodrigue KOFFI**
+
+| Titre / Statut | Description |
+|----------------|-------------|
+| **Actuarial Analyst** | Provisions techniques, best estimate, passif prudentiel (Solvabilité II) |
+| **Credit & Financial Modeling** | Modèles de risque de crédit (Bâle IRB, IFRS 9) et modélisation financière |
+| **FRM Part I Candidate** | Financial Risk Manager (GARP) |
+
+### Contact
+
+- **GitHub** : [@rodrigue-koffi](https://github.com/rodrigue-koffi)
+- **Email** : kkanrodrigue@gmail.com
+
+---
+
+**Made with by Rodrigue KOFFI**

@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 class DataLoader:
     """
-    Chargeur de données pour le projet de risque de crédit
+    Load Data pour le projet de risque de crédit
     """
     
     def __init__(self, data_path: str):
@@ -18,7 +18,7 @@ class DataLoader:
         
     def load_german_credit_data(self) -> pd.DataFrame:
         """
-        Charger les données German Credit Data
+        Load Credit Data
         """
         try:
             file_path = self.data_path / 'german_credit_data.xlsx'

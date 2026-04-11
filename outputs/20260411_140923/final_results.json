@@ -1,0 +1,195 @@
+{
+  "phase1": {
+    "data_shape": [
+      1000,
+      34
+    ],
+    "default_rate": 0.3
+  },
+  "phase2": {
+    "pd_raw_model": 0.3,
+    "pd_ttc_basel": 0.2969969837845975,
+    "pd_pit_ifrs9": 0.1407129476722953,
+    "pd_pit_weighted": 0.07290265985388913,
+    "ratio_pit_ttc": 0.47378578017596956,
+    "pit_scenarios": {
+      "Baseline": {
+        "pd_pit": 0.05720961525622185,
+        "weight": 0.5,
+        "description": {
+          "UnemploymentRate": 0,
+          "GdpGrowth": 0
+        }
+      },
+      "Upside": {
+        "pd_pit": 0.03647846123081754,
+        "weight": 0.25,
+        "description": {
+          "UnemploymentRate": -0.5,
+          "GdpGrowth": 0.5
+        }
+      },
+      "Downside": {
+        "pd_pit": 0.1407129476722953,
+        "weight": 0.25,
+        "description": {
+          "UnemploymentRate": 1.0,
+          "GdpGrowth": -1.0
+        }
+      }
+    },
+    "selected_features": [],
+    "iv_summary": [
+      {
+        "Feature": "Age",
+        "IV": 0,
+        "PredictivePower": "Weak"
+      },
+      {
+        "Feature": "Job",
+        "IV": 0,
+        "PredictivePower": "Weak"
+      },
+      {
+        "Feature": "Duration",
+        "IV": 0,
+        "PredictivePower": "Weak"
+      },
+      {
+        "Feature": "CreditAmount",
+        "IV": 0,
+        "PredictivePower": "Weak"
+      },
+      {
+        "Feature": "SavingAccountsNum",
+        "IV": 0,
+        "PredictivePower": "Weak"
+      },
+      {
+        "Feature": "CheckingAccountNum",
+        "IV": 0,
+        "PredictivePower": "Weak"
+      },
+      {
+        "Feature": "HousingNum",
+        "IV": 0,
+        "PredictivePower": "Weak"
+      }
+    ]
+  },
+  "phase3": {
+    "lifetime_observations": 1326,
+    "avg_pd_year1": 0.14109632009822848,
+    "avg_pd_year5": 0.1479596644774185
+  },
+  "phase4": {
+    "lgd_mean": 0.3430500000000001,
+    "lgd_std": 0.1027131483105191,
+    "ead_mean": 3271.258,
+    "ead_total": 3271258
+  },
+  "phase5": {
+    "stage_allocation": {
+      "1": 663,
+      "2": 37,
+      "3": 300
+    },
+    "stage_exposure": {
+      "1": 1965310,
+      "2": 124510,
+      "3": 1181438
+    }
+  },
+  "phase6": {
+    "pd_used_for_ecl": 0.07290265985388913,
+    "ecl_by_stage": {
+      "1": 53490.04269998969,
+      "2": 10601.19489658443,
+      "3": 140434.57607372061
+    },
+    "total_ecl": 204525.81367029474,
+    "final_ecl_with_moc": 235337.76575785267,
+    "ecl_by_scenario": {
+      "Baseline": 236510.11795778095,
+      "Upside": 235695.17249369514,
+      "Downside": 237325.0634218666
+    }
+  },
+  "phase7": {
+    "stress_scenarios": {
+      "Light": {
+        "shocks": {
+          "unemployment": 0.1,
+          "gdp": -0.02,
+          "interest": 0.01
+        },
+        "ecl_stressed": 83735.20385223442,
+        "pd_multiplier": 1.2599999999999993
+      },
+      "Moderate": {
+        "shocks": {
+          "unemployment": 0.25,
+          "gdp": -0.05,
+          "interest": 0.02
+        },
+        "ecl_stressed": 114443.91881098846,
+        "pd_multiplier": 1.65
+      },
+      "Severe": {
+        "shocks": {
+          "unemployment": 0.5,
+          "gdp": -0.1,
+          "interest": 0.03
+        },
+        "ecl_stressed": 170657.73939679458,
+        "pd_multiplier": 2.3
+      },
+      "Extreme": {
+        "shocks": {
+          "unemployment": 1.0,
+          "gdp": -0.15,
+          "interest": 0.05
+        },
+        "ecl_stressed": 289376.16680326045,
+        "pd_multiplier": 3.4499999999999997
+      }
+    },
+    "reverse_stress": {
+      "critical_unemployment": 0.35801291442529865,
+      "vulnerable_segments": 7,
+      "recommendations": [
+        "Mettre en place un monitoring mensuel des indicateurs macro critiques",
+        "Diversifier le portefeuille pour r\u00e9duire la concentration sectorielle"
+      ]
+    }
+  },
+  "phase8": {
+    "xgb_model": {
+      "AUC": 0.7632275132275133,
+      "Gini": 0.5264550264550265,
+      "KS": 0.4619047619047619,
+      "Accuracy": 0.7366666666666667,
+      "Precision": 0.5486725663716814,
+      "Recall": 0.6888888888888889,
+      "Specificity": 0.7571428571428571,
+      "F1_Score": 0.6108374384236454
+    },
+    "logit_model": {
+      "AUC": 0.6784656084656085,
+      "Gini": 0.3569312169312171,
+      "KS": 0.28095238095238095,
+      "Accuracy": 0.74,
+      "Precision": 0.6875,
+      "Recall": 0.24444444444444444,
+      "Specificity": 0.9523809523809523,
+      "F1_Score": 0.360655737704918
+    },
+    "best_model": "XGBoost"
+  },
+  "phase9": {
+    "rwa_basel": 4326646.307688805,
+    "el_basel": 94074.88186524139,
+    "shortfall": 0,
+    "capital_impact": 0
+  }
+}

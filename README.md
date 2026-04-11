@@ -33,35 +33,52 @@ Projet complet de modélisation du risque de crédit pour portefeuille retail, c
 
 ---
 
-## 📁 Structure du projet
----
-creditRisk_IRB_IFRS9/
-├── data/ # Données brutes et traitées
-│ ├── raw/ # Données brutes
-│ ├── processed/ # Données traitées
-│ ├── external/ # Données externes
-│ └── macro/ # Données macroéconomiques
-├── logs/ # Logs d'exécution
-├── notebooks/ # Jupyter notebooks
-├── reports/ # Rapports et figures
-│ ├── figures/ # Graphiques
-│ ├── tables/ # Tableaux
-│ └── html/ # Rapports HTML
-├── src/ # Code source principal
-│ ├── dataPreparation/ # Chargement et nettoyage
-│ ├── irb/ # Bâle IRB (PD 1 an, RWA)
-│ ├── ifrs9/ # IFRS 9 (PD lifetime, ECL)
-│ ├── stressTesting/ # Stress test & reverse stress
-│ ├── resilience/ # Métriques de résilience
-│ ├── validation/ # Validation des modèles
-│ ├── utils/ # Utilitaires
-│ └── orchestration/ # Orchestrateur principal
-├── tests/ # Tests unitaires
-│ ├── unit/ # Tests unitaires
-│ ├── integration/ # Tests d'intégration
-│ └── fixtures/ # Fixtures de test
-├── requirements.txt # Dépendances Python
-└── README.md # Documentation
+
 
 ---
 
+## Résumé du projet
+
+Ce projet implémente une modélisation complète du risque de crédit conforme aux normes **Bâle IRB** et **IFRS 9**.
+
+### Probabilité de défaut (PD)
+
+| Type | Usage | Méthode |
+|------|-------|---------|
+| **PD brute** | Score de référence | Logit / XGBoost |
+| **PD TTC** | Bâle IRB (capital réglementaire) | Moyenne lissée sur cycle complet |
+| **PD PIT** | IFRS 9 (ECL, stress tests) | Ajustement macro `PD_TTC × exp(β × Δmacro)` |
+| **PD Lifetime** | ECL Stages 2 & 3 | GLM + Survie (Cox PH) + matrices de transition |
+
+### LGD & EAD
+
+- **LGD** : Approche microstructure (guérison + sévérité) + downturn
+- **EAD** : Produits engagés + CCF pour lignes non utilisées
+
+### Marge de Conservatisme (MoC)
+
+- Incertitude d'estimation
+- Incertitude de scénario
+- Incertitude de modèle
+
+### IFRS 9
+
+- **Staging** : Stage 1 / 2 / 3 (SICR + backstop 30 jours)
+- **ECL** : Multi-scénarios (baseline / upside / downside) avec pondération
+
+### Bâle III
+
+- RWA, EL, UL, shortfall, ratios de capital
+- Stress tests et reverse stress tests
+
+---
+
+## Installation
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/rodrigue-koffi/creditRisk_IRB_IFRS9.git
+cd creditRisk_IRB_IFRS9
+
+# Installer les dépendances
+pip install -r requirements.txt

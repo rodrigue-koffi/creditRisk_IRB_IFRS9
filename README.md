@@ -1,4 +1,4 @@
-# creditRisk_IRB_IFRS9
+
 <h1 align="center">
   <span style="color: #0055A4;">creditRisk_IRB_IFRS9</span>
 </h1>

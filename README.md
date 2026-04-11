@@ -1,6 +1,13 @@
 # creditRisk_IRB_IFRS9
+<h1 align="center">
+  <span style="color: #0055A4;">creditRisk_IRB_IFRS9</span>
+</h1>
 
-**Credit risk modeling for Bâle IRB & IFRS 9**  
+<p align="center">
+  <strong style="color: #0055A4;">📊 Credit risk modeling for Bâle IRB</strong>
+  <strong style="color: #2E8B57;"> & IFRS 9</strong><br>
+  <span style="color: #666;">Python 3.9+</span>
+</p>
 *Python implementation for retail portfolio*
 
 ---
@@ -74,9 +81,9 @@ Ce projet implémente une modélisation complète du risque de crédit conforme 
 ---
 
 
-## 🔮 Axes d'amélioration non pris en compte
+## Axes d'amélioration non pris en compte
 
-Le projet actuel est fonctionnel et complet, mais les axes suivants n'ont **pas été implémentés** (réservés pour des versions futures) :
+Le projet actuel est fonctionnel et complet, mais les axes suivants n'ont **pas été implémentés** (réservés pour des versions futures?) :
 
 | Axe | Description | Priorité |
 |-----|-------------|----------|
@@ -97,7 +104,7 @@ Le projet actuel est fonctionnel et complet, mais les axes suivants n'ont **pas 
 
 ---
 
-## 👤 Auteur
+## Author
 
 **Rodrigue KOFFI**
 
@@ -123,4 +130,3 @@ cd creditRisk_IRB_IFRS9
 # Installer les dépendances
 pip install -r requirements.txt
 ---
-**Made with by Rodrigue KOFFI**
